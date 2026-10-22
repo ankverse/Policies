@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found (404) | Ankrypt Legal Hub</title>
+  <meta name="description" content="The page you requested could not be found on the Ankrypt Legal Documentation Hub.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+    }
+    .error-card {
+      background: #ffffff;
+      border-radius: 0.5rem;
+      border: 1px solid var(--bs-border-color);
+      padding: 3rem;
+    }
+    .error-code {
+      font-size: 5rem;
+      font-weight: 800;
+      line-height: 1;
+      color: var(--bs-secondary);
+    }
+  </style>
+</head>
+<body class="bg-body-tertiary">
+
+  <!-- Header / Navigation -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html" id="homeBrandLink">
+          <i class="bi bi-shield-check me-2 text-primary"></i>Ankrypt Legal
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Error Content -->
+  <main class="py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6 text-center">
+          <div class="error-card shadow-sm">
+            <div class="error-code mb-3">404</div>
+            <h1 class="h3 fw-bold text-dark mb-2">Page Not Found</h1>
+            <p class="text-secondary mb-4">
+              The legal document or page you are attempting to reach does not exist, has been relocated, or is temporarily unavailable.
+            </p>
+            
+            <div class="list-group text-start mb-4">
+              <a href="index.html" class="list-group-item list-group-item-action d-flex align-items-center">
+                <i class="bi bi-house-door-fill text-primary me-3 fs-5"></i>
+                <div>
+                  <div class="fw-semibold">Documentation Home</div>
+                  <small class="text-muted">Browse directory of all policies and agreements</small>
+                </div>
+              </a>
+              <a href="bhulekh/privacy-policy.html" class="list-group-item list-group-item-action d-flex align-items-center">
+                <i class="bi bi-android2 text-success me-3 fs-5"></i>
+                <div>
+                  <div class="fw-semibold">Bhulekh Uttar Pradesh Legal Docs</div>
+                  <small class="text-muted">Privacy Policy & Terms of Service</small>
+                </div>
+              </a>
+              <a href="flarex/privacy-policy.html" class="list-group-item list-group-item-action d-flex align-items-center">
+                <i class="bi bi-cloud-fill text-warning me-3 fs-5"></i>
+                <div>
+                  <div class="fw-semibold">FlareX Legal Docs</div>
+                  <small class="text-muted">Privacy Policy & Terms of Service</small>
+                </div>
+              </a>
+            </div>
+
+            <a href="index.html" class="btn btn-primary px-4 py-2 fw-medium" id="backHomeBtn">
+              <i class="bi bi-arrow-left me-2"></i>Return to Safe Harbor
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-light py-4 border-top border-secondary">
+    <div class="container text-center">
+      <span class="small text-muted">&copy; 2026 Ankrypt. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script>
+    // In GitHub Pages custom 404, dynamic paths might need absolute root adjustment
+    (function() {
+      // Determine base URL if hosted in a subpath repository on GitHub pages
+      var pathSegments = window.location.pathname.split('/').filter(Boolean);
+      var repoName = pathSegments.length > 0 ? '/' + pathSegments[0] + '/' : '/';
+      // If we are hosted on *.github.io/<repo>/
+      if (window.location.hostname.endsWith('github.io') && pathSegments.length > 0) {
+        var base = '/' + pathSegments[0] + '/';
+        var homeBrand = document.getElementById('homeBrandLink');
+        var backBtn = document.getElementById('backHomeBtn');
+        if (homeBrand) homeBrand.setAttribute('href', base + 'index.html');
+        if (backBtn) backBtn.setAttribute('href', base + 'index.html');
+      }
+    })();
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
